@@ -12,7 +12,23 @@
 		1954528A211C821A00F26DD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19545288211C821A00F26DD2 /* Main.storyboard */; };
 		1954528C211C821B00F26DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1954528B211C821B00F26DD2 /* Assets.xcassets */; };
 		1954528F211C821B00F26DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1954528D211C821B00F26DD2 /* LaunchScreen.storyboard */; };
+		19545299211C843D00F26DD2 /* Bots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19545298211C843D00F26DD2 /* Bots.framework */; };
+		1954529B211C844500F26DD2 /* Bots.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19545298211C843D00F26DD2 /* Bots.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1954529C211C844500F26DD2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1954529B211C844500F26DD2 /* Bots.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		19545281211C821A00F26DD2 /* ChatbotTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatbotTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +38,7 @@
 		1954528B211C821B00F26DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1954528E211C821B00F26DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19545290211C821B00F26DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19545298211C843D00F26DD2 /* Bots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bots.framework; path = ChatbotTest.xcodeproj/Bots.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19545299211C843D00F26DD2 /* Bots.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +56,7 @@
 		19545278211C821A00F26DD2 = {
 			isa = PBXGroup;
 			children = (
+				19545298211C843D00F26DD2 /* Bots.framework */,
 				19545283211C821A00F26DD2 /* ChatbotTest */,
 				19545282211C821A00F26DD2 /* Products */,
 			);
@@ -74,6 +93,7 @@
 				1954527D211C821A00F26DD2 /* Sources */,
 				1954527E211C821A00F26DD2 /* Frameworks */,
 				1954527F211C821A00F26DD2 /* Resources */,
+				1954529C211C844500F26DD2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,6 +301,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ChatbotTest",
+					"$(PROJECT_DIR)/ChatbotTest.xcodeproj",
+				);
 				INFOPLIST_FILE = ChatbotTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,6 +323,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ChatbotTest",
+					"$(PROJECT_DIR)/ChatbotTest.xcodeproj",
+				);
 				INFOPLIST_FILE = ChatbotTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
